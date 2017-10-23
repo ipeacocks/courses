@@ -1,0 +1,19 @@
+export DATABASE_URL="postgresql://localhost/discover_flask_dev"
+export APP_SETTINGS=config.DevelopmentConfig
+
+cd ~/.virtualenvs/discover-flask/
+» vim $VIRTUAL_ENV/bin/postactivate
+export DATABASE_URL="postgresql://localhost/discover_flask_dev"
+export APP_SETTINGS=config.DevelopmentConfig
+
+
+vim .bash_profile
+
+source "/usr/local/bin/virtualenvwrapper.sh"
+export WORKON_HOME="/opt/virtual_env/"
+
+
+# mkvirtualenv discover-flask
+
+# workon discover-flask
+# deactivate
