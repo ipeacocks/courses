@@ -1,9 +1,10 @@
 from flask import Flask, render_template, json, request
-from flask.ext.mysql import MySQL
+from flaskext.mysql import MySQL
 from werkzeug import generate_password_hash, check_password_hash
 
 mysql = MySQL()
 app = Flask(__name__)
+app.config.from_pyfile('_config.py')
 
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'root'
@@ -31,7 +32,7 @@ def signUp():
 
         # validate the received values
         if _name and _email and _password:
-            
+
             # All Good, let's call MySQL
             
             conn = mysql.connect()
