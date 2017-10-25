@@ -26,6 +26,7 @@ def showSignUp():
 @app.route('/signUp',methods=['POST','GET'])
 def signUp():
     try:
+        # read the posted values from the UI
         _name = request.form['inputName']
         _email = request.form['inputEmail']
         _password = request.form['inputPassword']
@@ -54,6 +55,12 @@ def signUp():
     finally:
         cursor.close() 
         conn.close()
+
+
+@app.route('/showSignin')
+def showSignin():
+    return render_template('signin.html')
+
 
 if __name__ == "__main__":
     app.run(port=5002)

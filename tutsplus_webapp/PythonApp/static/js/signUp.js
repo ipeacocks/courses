@@ -7,7 +7,7 @@ $(function() {
             type: 'POST',
             // console.log( $( data ) );
             success: function(response) {
-                // console.log(response);
+                console.log(response);
                 console.log($('form').serialize());
             },
             error: function(error) {
