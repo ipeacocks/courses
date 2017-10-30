@@ -4,13 +4,13 @@ $(function(){
         type : 'GET',
         success: function(res){
             var div = $('<div>')
-.attr('class', 'list-group')
-.append($('<a>')
-    .attr('class', 'list-group-item active')
-    .append($('<h4>')
-        .attr('class', 'list-group-item-heading'),
-        $('<p>')
-        .attr('class', 'list-group-item-text')));
+            .attr('class', 'list-group')
+            .append($('<a>')
+            .attr('class', 'list-group-item active')
+            .append($('<h4>')
+            .attr('class', 'list-group-item-heading'),
+            $('<p>')
+            .attr('class', 'list-group-item-text')));
                             
             
             
