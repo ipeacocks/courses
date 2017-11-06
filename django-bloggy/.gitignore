@@ -1,2 +1,4 @@
 # pyenv
 env/
+.DS_Store
+*.db
