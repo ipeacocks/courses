@@ -1,4 +1,7 @@
-# pyenv
-env/
+# virtualenv
+bin
+include
+lib
 .DS_Store
 *.db
+pip-selfcheck.json
