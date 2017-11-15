@@ -11,13 +11,13 @@ def encode_url(url):
     return url.replace(' ', '_')
 
 
-# def popular_posts():
-#     return Post.objects.order_by('-views')[:5]
+def get_popular_posts():
+    return Post.objects.order_by('-views')[:5]
 
 
 def index(request):
     latest_posts = Post.objects.all().order_by('-created_at')
-    popular_posts = Post.objects.order_by('-views')[:5]
+    popular_posts = get_popular_posts()
     t = loader.get_template('blog/index.html')
     context_dict = {
         'latest_posts': latest_posts,
@@ -33,10 +33,10 @@ def index(request):
 
 def post(request, post_url):
     single_post = get_object_or_404(Post, title=post_url.replace('_', ' '))
+    popular_posts = get_popular_posts()
     # increment the number of views and save it
     single_post.views += 1
     single_post.save()
-    popular_posts = Post.objects.order_by('-views')[:5]
     t = loader.get_template('blog/post.html')
     context_dict = {
         'single_post': single_post,
@@ -53,7 +53,9 @@ def add_post(request):
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             form.save(commit=True)
-            return redirect(index)
+            title_value = form.cleaned_data['title']
+            redirect_link = ('/blog/{}/').format(encode_url(title_value))
+            return redirect(redirect_link)
         else:
             print(form.errors)
     else:
