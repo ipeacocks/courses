@@ -1,0 +1,8 @@
+# virtualenv
+bin
+include
+lib
+env
+.DS_Store
+*.db
+pip-selfcheck.json
