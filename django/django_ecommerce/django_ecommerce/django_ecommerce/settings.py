@@ -39,8 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.flatpages',
+    'django_forms_bootstrap',
     'main',
     'contact',
+    'payments',
 ]
 
 MIDDLEWARE = [
@@ -123,5 +125,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 SITE_ID = 1
+STRIPE_SECRET = 'sk_test_iegfJOlmt9ofOXFZogiIOhfa'
+STRIPE_PUBLISHABLE = 'pk_test_GMnsrPEvpUNQsp8gufs8A5No'
