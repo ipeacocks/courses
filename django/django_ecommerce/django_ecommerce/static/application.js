@@ -1,8 +1,8 @@
 $(function() {
+
   $("#user_form").submit(function() {
     if ( $("#credit-card").is(":visible")) {
       var form = this;
-      console.log(form);
       var card = {
         number:   $("#credit_card_number").val(),
         expMonth: $("#expiry_month").val(),
@@ -23,13 +23,13 @@ $(function() {
           $("#user_submit").attr("disabled", false);
         }
       });
-
+      
       return false;
-
-    }
-
+      
+    } 
+    
     return true
-
+    
   });
 
   $("#change-card a").click(function() {

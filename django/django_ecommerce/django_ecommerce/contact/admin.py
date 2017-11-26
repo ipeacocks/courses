@@ -3,7 +3,7 @@ from .models import ContactForm
 
 
 class ContactFormAdmin(admin.ModelAdmin):
-    class Meta:
+   class Meta:
         model = ContactForm
 
-admin.site.register(ContactForm, ContactFormAdmin)
+admin.site.register(ContactForm,ContactFormAdmin) 
