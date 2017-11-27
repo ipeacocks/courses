@@ -6,13 +6,8 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 PROJECT_ROOT = os.path.realpath(os.path.dirname(__file__))
 SITE_ROOT = os.path.dirname(PROJECT_ROOT)
-STRIPE_SECRET = 'sk_test_h36oicOrlA7ATkI9JJ6dUGyA'
-STRIPE_PUBLISHABLE = 'pk_test_8Xho4FfArFFuQspdH8V1KlHS'
-INTERNAL_IPS = ('127.0.0.1',)
-
-def show_toolbar(request):
-    return True
-SHOW_TOOLBAR_CALLBACK = show_toolbar
+STRIPE_SECRET = 'sk_test_4QBquf6d5EzsnJC1fTI2GBGm'
+STRIPE_PUBLISHABLE = 'pk_test_4QBqqGvCk9gaNn3pl1cwxcAS'
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -23,9 +18,9 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(SITE_ROOT, 'test.db'),                      
+        'NAME': 'test.db'
     }
-} 
+}
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
@@ -85,7 +80,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '%2$^mv(%hu60&6*z(4a27nu2hws0y)jr*s-v212(_gs%iswo5u'
+SECRET_KEY = '!(1ty%c5a)0l0(p)kxl2igmbobx_64hqh&tv1=+s9@!@zez4o^'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -95,13 +90,14 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-'django.middleware.common.CommonMiddleware',
-'django.contrib.sessions.middleware.SessionMiddleware',
-'django.middleware.csrf.CsrfViewMiddleware',
-'django.contrib.auth.middleware.AuthenticationMiddleware',
-'django.contrib.messages.middleware.MessageMiddleware',
-'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
-#'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    # Uncomment the next line for simple clickjacking protection:
+    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
 ROOT_URLCONF = 'django_ecommerce.urls'
@@ -123,8 +119,9 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'contact',
     'payments',
-    #'debug_toolbar',
 )
+
+SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
