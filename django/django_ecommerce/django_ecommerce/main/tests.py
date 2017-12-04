@@ -43,31 +43,25 @@ class MainPageTests(TestCase):
         )
 
     def test_index_handles_logged_in_user(self):
-        # Create the user needed for user lookup from index page
-        # Note that we are not saving to the database
-        user = User(
-            name='jj',
-            email='j@j.com'
-        )
-
         # Create a session that appears to have a logged in user
         self.request.session = {"user": "1"}
 
         with mock.patch('main.views.User') as user_mock:
 
             # Tell the mock what to do when called
-            config = {'get.return_value': user}
-            user_mock.objects.configure_mock(**config)
+            config = {'get_by_id.return_value': mock.Mock()}
+            user_mock.configure_mock(**config)
 
             # Run the test
             resp = index(self.request)
 
-            # Ensure we return the state of the session back to normal so
-            # we don't affest other tests
+            # Ensure we return the state of the session back to normal
             self.request.session = {}
 
             # Verify it returns the page for the logged in user
-            expectedHtml = render_to_response('user.html', {'user': user}).content
+            expectedHtml = render_to_response(
+                'user.html', {'user': user_mock.get_by_id(1)}
+            )
             self.assertEquals(
                 resp.content,
                 expectedHtml
