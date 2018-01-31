@@ -1,6 +1,5 @@
 from dbhelper import DBHelper
-from flask import Flask
-from flask import render_template, request
+from flask import Flask, render_template, request
 import json
 
 import dbconfig
@@ -15,28 +14,12 @@ DB = DBHelper()
 
 @app.route("/")
 def home():
-    data = DB.get_all_crimes()
+    crimes = DB.get_all_crimes()
+    print crimes
+    print '-----------------'
     crimes = json.dumps(crimes)
+    print crimes
     return render_template("home.html", crimes=crimes)
-
-
-@app.route("/add", methods=["POST"])
-def add():
-    try:
-        data = request.form.get("userinput")
-        DB.add_input(data)
-    except Exception as e:
-        print e
-    return home()
-
-
-@app.route("/clear")
-def clear():
-    try:
-        DB.clear_all()
-    except Exception as e:
-        print e
-    return home()
 
 
 @app.route("/submitcrime", methods=['POST'])
