@@ -4,11 +4,13 @@ from flask_login import LoginManager, login_required, login_user, logout_user
 from mockdbhelper import MockDBHelper as DBHelper
 from user import User
 
+from passwordhelper import PasswordHelper
 
 app = Flask(__name__)
 app.secret_key = 'n5eJpftYp7GwtWZJHqk3ApQxN37GtAbplgQ9K'
 login_manager = LoginManager(app)
 DB = DBHelper()
+PH = PasswordHelper()
 
 # from cookies
 # p.160
@@ -23,8 +25,9 @@ def load_user(user_id):
 def login():
     email = request.form.get("email")
     password = request.form.get("password")
-    user_password = DB.get_user(email)
-    if user_password and user_password == password:
+    stored_user = DB.get_user(email)
+
+    if stored_user and PH.validate_password(password, stored_user['salt'], stored_user['hashed']):
         user = User(email)
         login_user(user, remember=True)
         return redirect(url_for('account'))
