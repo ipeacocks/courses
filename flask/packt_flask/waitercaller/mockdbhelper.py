@@ -30,4 +30,4 @@ class MockDBHelper:
         for i, table in enumerate(MOCK_TABLES):
             if table.get("_id") == table_id:
                 del MOCK_TABLES[i]
-            break
+                break

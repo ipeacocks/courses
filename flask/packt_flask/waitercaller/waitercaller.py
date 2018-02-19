@@ -86,6 +86,7 @@ def account_createtable():
 @login_required
 def account_deletetable():
     tableid = request.args.get("tableid")
+    print tableid
     DB.delete_table(tableid)
     return redirect(url_for('account'))
 
