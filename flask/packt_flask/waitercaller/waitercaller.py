@@ -1,5 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, request
 from flask_login import LoginManager, login_required, login_user, logout_user, current_user
+import datetime
 
 from mockdbhelper import MockDBHelper as DBHelper
 from user import User
@@ -7,12 +8,14 @@ from user import User
 from passwordhelper import PasswordHelper
 import config
 
+from bitlyhelper import BitlyHelper
 
 app = Flask(__name__)
 app.secret_key = 'n5eJpftYp7GwtWZJHqk3ApQxN37GtAbplgQ9K'
 login_manager = LoginManager(app)
 DB = DBHelper()
 PH = PasswordHelper()
+BH = BitlyHelper()
 
 # from cookies
 # p.160
@@ -77,7 +80,7 @@ def account():
 def account_createtable():
     tablename = request.form.get("tablenumber")
     tableid = DB.add_table(tablename, current_user.get_id())
-    new_url = config.base_url + "newrequest/" + tableid
+    new_url = BH.shorten_url(config.base_url + "newrequest/" + tableid)
     DB.update_table(tableid, new_url)
     return redirect(url_for('account'))
 
@@ -95,6 +98,11 @@ def account_deletetable():
 @login_required
 def dashboard():
     return render_template("dashboard.html")
+
+@app.route("/newrequest/<tid>")
+def new_request(tid):
+    DB.add_request(tid, datetime.datetime.now())
+    return "Your request has been logged and a waiter will be with you shortly"
 
 
 if __name__ == '__main__':
