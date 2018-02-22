@@ -1,9 +1,9 @@
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 from wtforms import PasswordField, SubmitField, validators
 from wtforms.fields.html5 import EmailField
 
 
-class RegistrationForm(Form):
+class RegistrationForm(FlaskForm):
     email = EmailField(
         'email',
         validators=[validators.DataRequired(), validators.Email()]
@@ -11,7 +11,8 @@ class RegistrationForm(Form):
     password = PasswordField(
         'password',
         validators=[validators.DataRequired(),
-                    validators.Length(min=8, message="Please choose a password of at least 8 characters")]
+                    validators.Length(min=8,
+                    message="Please choose a password of at least 8 characters")]
     )
     password2 = PasswordField(
         'password2',

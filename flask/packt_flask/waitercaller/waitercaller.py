@@ -10,6 +10,9 @@ import config
 
 from bitlyhelper import BitlyHelper
 
+from forms import RegistrationForm
+
+
 app = Flask(__name__)
 app.secret_key = 'n5eJpftYp7GwtWZJHqk3ApQxN37GtAbplgQ9K'
 login_manager = LoginManager(app)
@@ -66,7 +69,9 @@ def logout():
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    registrationform = RegistrationForm()
+    return render_template("home.html",
+                            registrationform=registrationform)
 
 
 @app.route("/account")
