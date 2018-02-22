@@ -90,7 +90,6 @@ def account_createtable():
 @login_required
 def account_deletetable():
     tableid = request.args.get("tableid")
-    print tableid
     DB.delete_table(tableid)
     return redirect(url_for('account'))
 
@@ -100,9 +99,10 @@ def account_deletetable():
 def dashboard():
     now = datetime.datetime.now()
     requests = DB.get_requests(current_user.get_id())
+    print requests
     for req in requests:
         deltaseconds = (now - req['time']).seconds
-        req['wait_minutes'] = "{}.{}".format((deltaseconds/60), str(deltaseconds % 60).zfill(2))
+        req['wait_minutes'] = "{}m {}s".format((deltaseconds/60), str(deltaseconds % 60).zfill(2))
     print requests
     return render_template("dashboard.html", requests=requests)
 
@@ -110,7 +110,8 @@ def dashboard():
 @app.route("/dashboard/resolve")
 @login_required
 def dashboard_resolve():
-    request_id = request.args.get("request_id")
+    request_id = request.args.get("request._id")
+    print request_id
     DB.delete_request(request_id)
     return redirect(url_for('dashboard'))
 

@@ -65,6 +65,7 @@ class MockDBHelper:
 
 
     def delete_request(self, request_id):
+        print MOCK_REQUESTS
         for i, request in enumerate(MOCK_REQUESTS):
             if request.get("_id") == request_id:
                 del MOCK_REQUESTS[i]

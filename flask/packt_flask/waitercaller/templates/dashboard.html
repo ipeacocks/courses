@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block metarefresh %} <meta http-equiv="refresh" content="10" > {% endblock %}
+
 {% block content %}
     <div class="jumbotron">
         <div class="container">
@@ -24,7 +26,7 @@
                                 <form class="form-inline" action="/dashboard/resolve">
                                     <td>{{ request.table_number }}</td>
                                     <td>{{ request.wait_minutes }}</td>
-                                    <input type="text" name="request_id" value="{{ request_id }}" hidden>
+                                    <input type="text" name="request._id" value="{{ request._id }}" hidden>
                                     <td><input type="submit" value="Resolve" class="btn btn-primary"></td>
                                 </form>
                             </tr>
