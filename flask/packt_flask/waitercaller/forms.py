@@ -21,3 +21,15 @@ class RegistrationForm(FlaskForm):
 
     )
     submit = SubmitField('submit', [validators.DataRequired()])
+
+
+class LoginForm(FlaskForm):
+    loginemail = EmailField(
+        'email',
+        validators=[validators.DataRequired(), validators.Email()]
+    )
+    loginpassword = PasswordField(
+        'password',
+        validators=[validators.DataRequired(message="Password field is required")]
+    )
+    submit = SubmitField('submit', [validators.DataRequired()])
