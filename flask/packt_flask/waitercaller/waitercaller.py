@@ -3,11 +3,9 @@ from flask_login import LoginManager, login_required, login_user, logout_user, c
 import datetime
 
 from user import User
-
-from passwordhelper import PasswordHelper
 import config
-
 from bitlyhelper import BitlyHelper
+from passwordhelper import PasswordHelper
 
 from forms import RegistrationForm, LoginForm, CreateTableForm
 
@@ -112,11 +110,9 @@ def account_deletetable():
 def dashboard():
     now = datetime.datetime.now()
     requests = DB.get_requests(current_user.get_id())
-    print requests
     for req in requests:
         deltaseconds = (now - req['time']).seconds
         req['wait_minutes'] = "{}m {}s".format((deltaseconds/60), str(deltaseconds % 60).zfill(2))
-    print requests
     return render_template("dashboard.html", requests=requests)
 
 
@@ -124,7 +120,6 @@ def dashboard():
 @login_required
 def dashboard_resolve():
     request_id = request.args.get("request._id")
-    print request_id
     DB.delete_request(request_id)
     return redirect(url_for('dashboard'))
 
