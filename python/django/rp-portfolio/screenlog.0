@@ -1,0 +1,926 @@
+numid=13,iface=MIXER,name='Headphone Switch'
+  ; type=BOOLEAN,access=rw------,values=1
+  : values=on
+numid=9,iface=MIXER,name='Headphone Volume'
+  ; type=INTEGER,access=rw---R--,values=1,min=0,max=7,step=0
+  : values=3
+  | dBscale-min=-42.00dB,step=6.00dB,mute=0
+numid=10,iface=MIXER,name='LINEOUT Output Select'
+  ; type=ENUMERATED,access=rw------,values=1,items=2
+  ; Item #0 'DAC_SINGLE'
+  ; Item #1 'DAC_DIFFER'
+  : values=1
+numid=15,iface=MIXER,name='LINEOUT Switch'
+  ; type=BOOLEAN,access=rw------,values=1
+  : values=on
+numid=6,iface=MIXER,name='LINEOUT volume'
+  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
+  : values=31
+  | dBrange-
+    rangemin=0,,rangemax=1
+      | dBscale-min=0.00dB,step=0.00dB,mute=1
+    rangemin=2,,rangemax=31
+      | dBscale-min=-43.50dB,step=1.50dB,mute=1
+
+numid=11,iface=MIXER,name='ADCL Input MIC1 Boost Switch'
+  ; type=BOOLEAN,access=rw------,values=1
+  : values=on
+numid=4,iface=MIXER,name='MIC1 gain volume'
+  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
+  : values=0
+  | dBscale-min=0.00dB,step=1.00dB,mute=0
+numid=12,iface=MIXER,name='ADCR Input MIC2 Boost Switch'
+  ; type=BOOLEAN,access=rw------,values=1
+  : values=on
+numid=5,iface=MIXER,name='MIC2 gain volume'
+  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
+  : values=0
+  | dBscale-min=0.00dB,step=1.00dB,mute=0
+e2fsck 1.43.9 (8-Feb-2018)
+ext2fs_check_if_mount: Can't check if filesystem is mounted due to missing mtab file while determining whether /dev/by-name/misc is mounted.
+/dev/by-name/misc: clean, 17/256 files, 1119/2048 blocks
+oggdec from vorbis-tools 1.4.0
+Decoding "/audio/EN/0.ogg" to "/tmp/0.wav"
+	[  0.0%]	[  0.5%]	[  1.0%]	[  1.5%]	[  2.0%]	[  2.5%]	[  2.5%]	[  3.0%]	[  3.5%]	[  4.0%]	[  4.5%]	[  5.0%]	[  5.5%]	[  6.0%]	[  6.5%]	[  7.0%]	[  7.5%]	[  8.0%]	[  8.0%]	[  8.5%]	[  9.0%]	[  9.5%]	[ 10.0%]	[ 10.5%]	[ 11.0%]	[ 11.5%]	[ 11.5%]	[ 12.0%]	[ 12.5%]	[ 13.0%]	[ 13.5%]	[ 14.0%]	[ 14.5%]	[ 15.0%]	[ 15.5%]	[ 16.0%]	[ 16.5%]	[ 16.5%]	[ 17.0%]	[ 17.5%]	[ 18.0%]	[ 18.5%]	[ 19.0%]	[ 19.5%]	[ 20.0%]	[ 20.5%]	[ 21.0%]	[ 21.5%]	[ 21.5%]	[ 22.0%]	[ 22.5%]	[ 23.0%]	[ 23.5%]	[ 24.0%]	[ 24.5%]	[ 25.0%]	[ 25.5%]	[ 26.0%]	[ 26.5%]	[ 27.0%]	[ 27.5%]	[ 28.0%]	[ 28.5%]	[ 29.0%]	[ 29.5%]	[ 30.0%]	[ 30.5%]	[ 31.0%]	[ 31.5%]	[ 32.0%]	[ 32.5%]	[ 33.0%]	[ 33.5%]	[ 33.5%]	[ 34.0%]	[ 34.5%]	[ 34.5%]	[ 35.0%]	[ 35.0%]	[ 35.5%]	[ 36.0%]	[ 36.5%]	[ 37.5%]	[ 38.0%]	[ 38.5%]	[ 39.0%]	[ 39.0%]	[ 39.5%]	[ 40.0%]	[ 40.5%]	[ 41.0%]	[ 41.5%]	[ 42.0%]	[ 42.5%]	[ 43.0%]	[ 43.5%]	[ 44.0%]	[ 44.0%]	[ 44.5%]	[ 45.0%]	[ 45.5%]	[ 46.0%]	[ 46.5%]	[ 47.0%]	[ 47.5%]	[ 48.0%]	[ 48.5%]	[ 48.5%]	[ 49.0%]	[ 49.0%]	[ 49.5%]	[ 50.0%]	[ 50.5%]	[ 51.0%]	[ 51.5%]	[ 52.0%]	[ 52.5%]	[ 53.0%]	[ 53.0%]	[ 53.5%]	[ 54.0%]	[ 54.5%]	[ 55.0%]	[ 55.5%]	[ 56.0%]	[ 56.5%]	[ 57.0%]	[ 57.5%]	[ 57.5%]	[ 58.0%]	[ 58.5%]	[ 59.0%]	[ 59.5%]	[ 60.0%]	[ 60.5%]	[ 61.0%]	[ 61.5%]	[ 62.0%]	[ 62.0%]	[ 62.5%]	[ 62.5%]	[ 63.0%]	[ 63.5%]	[ 63.5%]	[ 64.0%]	[ 64.5%]	[ 65.0%]	[ 65.0%]	[ 65.5%]	[ 65.5%]	[ 66.0%]	[ 66.0%]	[ 66.5%]	[ 67.0%]	[ 67.5%]	[ 68.0%]	[ 68.5%]	[ 69.0%]	[ 69.5%]	[ 70.0%]	[ 70.5%]	[ 71.5%]	[ 72.0%]	[ 72.5%]	[ 73.0%]	[ 73.5%]	[ 74.0%]	[ 74.5%]	[ 75.0%]	[ 75.5%]	[ 76.0%]	[ 76.5%]	[ 77.0%]	[ 77.5%]	[ 78.0%]	[ 78.5%]	[ 79.0%]	[ 79.5%]	[ 80.0%]	[ 80.5%]	[ 81.0%]	[ 81.5%]	[ 82.0%]	[ 82.5%]	[ 83.0%]	[ 83.5%]	[ 84.0%]	[ 84.5%]	[ 85.5%]	[ 86.0%]	[ 86.5%]	[ 87.0%]	[ 87.5%]	[ 88.0%]	[ 88.5%]	[ 89.0%]	[ 89.5%]	[ 90.0%]	[ 90.5%]	[ 91.0%]	[ 91.5%]	[ 92.0%]	[ 92.5%]	[ 93.0%]	[ 93.5%]	[ 94.0%]	[ 94.5%]	[ 95.0%]	[ 95.5%]	[ 96.0%]	[ 96.5%]	[ 97.0%]	[ 97.5%]	[ 98.0%]	[ 99.0%]	[ 99.5%]	[100.0%]
+Playing WAVE '/tmp/0.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+Successfully initialized wpa_supplicant
+crond[1154]: crond (busybox 1.31.0) started, log level 8
+
+p2029
+killall: rsyslogd: no process killed
+chpasswd: password for 'root' changed
+killall: wifi_manager: no process killed
+miio_client[1315]: [I] miio_client: Set data dir to: /etc/miio/
+miio_client[1315]: [I] miio_client: Set log level to: 0
+miio_client[1315]: [W] miio_client: version: miio-client 4.1.7 (main,277)
+miio_client[1323]: [I] miio_client_func: OT agent listen fd: 3
+miio_client[1323]: [I] miio_client_func: BT conn listen fd: 4
+miio_client[1323]: [I] miio_client: pollfds[0]: 3
+miio_client[1323]: [I] miio_client: pollfds[1]: 4
+miio_client[1323]: [I] miio_client_func: OT agent listen accept sockfd: 5
+miio_client[1323]: [I] miio_client_func: add_client_fd sockfd: 5
+miio_client[1323]: [D] miio_client_func: dump_poll_fd, poll fd count: 3
+miio_client[1323]: [D] miio_client_func: 3	4	5	
+miio_client[1323]: [D] miio_client_func: ------------------------------------------------------
+miio_client[1323]: [D] miio_client_func: dump_client_fd, client fd count: 1
+miio_client[1323]: [D] miio_client_func: 5	
+miio_client[1323]: [D] miio_client_func: ------------------------------------------------------
+miio_client[1323]: [I] miio_client_func: OT agent listen accept sockfd: 6
+miio_client[1323]: [I] miio_client_func: add_client_fd sockfd: 6
+miio_client[1323]: [D] miio_client_func: dump_poll_fd, poll fd count: 4
+miio_client[1323]: [D] miio_client_func: 3	4	5	6	
+miio_client[1323]: [D] miio_client_func: ------------------------------------------------------
+miio_client[1323]: [D] miio_client_func: dump_client_fd, client fd count: 2
+miio_client[1323]: [D] miio_client_func: 5	6	
+miio_client[1323]: [D] miio_client_func: ------------------------------------------------------
+miio_client[1323]: [D] miio_client_func: ot_agent_recv_handler(): fd:6, recv_len:35 bytes, total_len:35 bytes, total_msg:{"method":"_internal.helper_ready"}
+miio_client[1323]: [D] miio_client_func: ot_agent_recv_handler_one(): fd:6, msg:{"method":"_internal.helper_ready"} length:35 bytes
+miio_client[1323]: [D] internal: Got _internal.helper_ready
+miio_client[1323]: [D] miio_client_func: left_len: 0, left_buf: 
+miio_client[1323]: [D] miio_client_func: ot_agent_recv_handler(): fd:6, recv_len:0 bytes, total_len:0 bytes, total_msg:
+miio_client[1323]: [D] miio_client_func: ot_agent_recv_handler(): fd:6, recv_len:0 bytes, total_len:0 bytes, total_msg:
+miio_client[1323]: [I] miio_client_func: ot_agent_recv_handler, fd: 6, recv count is 0
+miio_client[1323]: [D] miio_client_func: dump_poll_fd, poll fd count: 3
+miio_client[1323]: [D] miio_client_func: 3	4	5	
+miio_client[1323]: [D] miio_client_func: ------------------------------------------------------
+miio_client[1323]: [D] miio_client_func: dump_client_fd, client fd count: 1
+miio_client[1323]: [D] miio_client_func: 5	
+miio_client[1323]: [D] miio_client_func: ------------------------------------------------------
+miio_client[1323]: [I] miio_client_func: OT agent internalfd closed: 6
+miio_client[1323]: [I] miio_client_func: OT agent listen accept sockfd: 6
+miio_client[1323]: [I] miio_client_func: add_client_fd sockfd: 6
+miio_client[1323]: [D] miio_client_func: dump_poll_fd, poll fd count: 4
+miio_client[1323]: [D] miio_client_func: 3	4	5	6	
+miio_client[1323]: [D] miio_client_func: ------------------------------------------------------
+miio_client[1323]: [D] miio_client_func: dump_client_fd, client fd count: 2
+miio_client[1323]: [D] miio_client_func: 5	6	
+miio_client[1323]: [D] miio_client_func: ------------------------------------------------------
+miio_client[1323]: [D] miio_client_func: ot_agent_recv_handler(): fd:6, recv_len:28 bytes, total_len:28 bytes, total_msg:{"method":"_internal.hello"}
+miio_client[1323]: [D] miio_client_func: ot_agent_recv_handler_one(): fd:6, msg:{"method":"_internal.hello"} length:28 bytes
+miio_client[1323]: [W] internal: handle_internal_hello, fd: 6, STATE: (0) (handle_internal_hello,2211)
+miio_client[1323]: [I] internal: check_device_info:2200, didkeyreq_timestamp: 0, didkeyreq_interval: 30.
+miio_client[1323]: [I] internal: cmd_internal_request_dinfo
+miio_client[1323]: [D] miio_client_func: left_len: 0, left_buf: 
+miio_client[1323]: [D] miio_client_func: ot_agent_recv_handler(): fd:6, recv_len:-1 bytes, total_len:-1 bytes, total_msg:
+miio_client[1323]: [D] miio_client_func: ot_agent_recv_handler(): fd:6, recv_len:0 bytes, total_len:0 bytes, total_msg:
+miio_client[1323]: [I] miio_client_func: ot_agent_recv_handler, fd: 6, recv count is 0
+miio_client[1323]: [D] miio_client_func: dump_poll_fd, poll fd count: 3
+miio_client[1323]: [D] miio_client_func: 3	4	5	
+miio_client[1323]: [D] miio_client_func: ------------------------------------------------------
+miio_client[1323]: [D] miio_client_func: dump_client_fd, client fd count: 1
+miio_client[1323]: [D] miio_client_func: 5	
+miio_client[1323]: [D] miio_client_func: ------------------------------------------------------
+miio_client[1323]: [I] miio_client_func: OT agent internalfd closed: 6
+killall: getty: no process killed
+
+p2029_release login: [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[B[B[B                                                        root
+Password: 
+Logi
+123   ZGZiMGI4NzI1MDAxY2NjZDY4MGRjYjdhNDI1ZDNlZDkgIC0K
+^C
+
+
+
+[340]HELLO! SBOOT is starting!
+[343]sboot commit : 9341f18 
+NOTICE:  BL3-1: v1.0(debug):b108d89
+NOTICE:  BL3-1: Built : 14:13:35, 2020-04-08
+NOTICE:  BL3-1 commit: 8
+NOTICE:  secure os exist
+MESSAGE: [0x0] TEE-CORE: OP-TEE version: 5f533bf9-dirty #1 2020年 08月 08日 星期六 03:04:16 UTC arm
+NOTICE:  BL3-1: Preparing for EL3 exit to normal world
+NOTICE:  BL3-1: Next image address = 0x4a000000
+NOTICE:  BL3-1: Next image spsr = 0x1d3[SCP] :sunxi-arisc driver begin startup 2
+[SCP] :0x1
+[SCP] :arisc version: []
+[SCP] :arisc startup ready
+[SCP] :arisc startup notify message feedback
+[SCP] :send hard sync feedback message: 0x900200
+[SCP] :sunxi-arisc driver v1.10 is starting
+numid=13,iface=MIXER,name='Headphone Switch'
+  ; type=BOOLEAN,access=rw------,values=1
+  : values=on
+numid=9,iface=MIXER,name='Headphone Volume'
+  ; type=INTEGER,access=rw---R--,values=1,min=0,max=7,step=0
+  : values=3
+  | dBscale-min=-42.00dB,step=6.00dB,mute=0
+numid=10,iface=MIXER,name='LINEOUT Output Select'
+  ; type=ENUMERATED,access=rw------,values=1,items=2
+  ; Item #0 'DAC_SINGLE'
+  ; Item #1 'DAC_DIFFER'
+  : values=1
+numid=15,iface=MIXER,name='LINEOUT Switch'
+  ; type=BOOLEAN,access=rw------,values=1
+  : values=on
+numid=6,iface=MIXER,name='LINEOUT volume'
+  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
+  : values=31
+  | dBrange-
+    rangemin=0,,rangemax=1
+      | dBscale-min=0.00dB,step=0.00dB,mute=1
+    rangemin=2,,rangemax=31
+      | dBscale-min=-43.50dB,step=1.50dB,mute=1
+
+numid=11,iface=MIXER,name='ADCL Input MIC1 Boost Switch'
+  ; type=BOOLEAN,access=rw------,values=1
+  : values=on
+numid=4,iface=MIXER,name='MIC1 gain volume'
+  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
+  : values=0
+  | dBscale-min=0.00dB,step=1.00dB,mute=0
+numid=12,iface=MIXER,name='ADCR Input MIC2 Boost Switch'
+  ; type=BOOLEAN,access=rw------,values=1
+  : values=on
+numid=5,iface=MIXER,name='MIC2 gain volume'
+  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
+  : values=0
+  | dBscale-min=0.00dB,step=1.00dB,mute=0
+e2fsck 1.43.9 (8-Feb-2018)
+ext2fs_check_if_mount: Can't check if filesystem is mounted due to missing mtab file while determining whether /dev/by-name/misc is mounted.
+/dev/by-name/misc: clean, 17/256 files, 1119/2048 blocks
+oggdec from vorbis-tools 1.4.0
+Decoding "/audio/EN/0.ogg" to "/tmp/0.wav"
+	[  0.0%]	[  0.5%]	[  1.0%]	[  1.5%]	[  2.0%]	[  2.5%]	[  2.5%]	[  3.0%]	[  3.5%]	[  4.0%]	[  4.5%]	[  5.0%]	[  5.5%]	[  6.0%]	[  6.5%]	[  7.0%]	[  7.5%]	[  8.0%]	[  8.0%]	[  8.5%]	[  9.0%]	[  9.5%]	[ 10.0%]	[ 10.5%]	[ 11.0%]	[ 11.5%]	[ 11.5%]	[ 12.0%]	[ 12.5%]	[ 13.0%]	[ 13.5%]	[ 14.0%]	[ 14.5%]	[ 15.0%]	[ 15.5%]	[ 16.0%]	[ 16.5%]	[ 16.5%]	[ 17.0%]	[ 17.5%]	[ 18.0%]	[ 18.5%]	[ 19.0%]	[ 19.5%]	[ 20.0%]	[ 20.5%]	[ 21.0%]	[ 21.5%]	[ 21.5%]	[ 22.0%]	[ 22.5%]	[ 23.0%]	[ 23.5%]	[ 24.0%]	[ 24.5%]	[ 25.0%]	[ 25.5%]	[ 26.0%]	[ 26.5%]	[ 27.0%]	[ 27.5%]	[ 28.0%]	[ 28.5%]	[ 29.0%]	[ 29.5%]	[ 30.0%]	[ 30.5%]	[ 31.0%]	[ 31.5%]	[ 32.0%]	[ 32.5%]	[ 33.0%]	[ 33.5%]	[ 33.5%]	[ 34.0%]	[ 34.5%]	[ 34.5%]	[ 35.0%]	[ 35.0%]	[ 35.5%]	[ 36.0%]	[ 36.5%]	[ 37.5%]	[ 38.0%]	[ 38.5%]	[ 39.0%]	[ 39.0%]	[ 39.5%]	[ 40.0%]	[ 40.5%]	[ 41.0%]	[ 41.5%]	[ 42.0%]	[ 42.5%]	[ 43.0%]	[ 43.5%]	[ 44.0%]	[ 44.0%]	[ 44.5%]	[ 45.0%]	[ 45.5%]	[ 46.0%]	[ 46.5%]	[ 47.0%]	[ 47.5%]	[ 48.0%]	[ 48.5%]	[ 48.5%]	[ 49.0%]	[ 49.0%]	[ 49.5%]	[ 50.0%]	[ 50.5%]	[ 51.0%]	[ 51.5%]	[ 52.0%]	[ 52.5%]	[ 53.0%]	[ 53.0%]	[ 53.5%]	[ 54.0%]	[ 54.5%]	[ 55.0%]	[ 55.5%]	[ 56.0%]	[ 56.5%]	[ 57.0%]	[ 57.5%]	[ 57.5%]	[ 58.0%]	[ 58.5%]	[ 59.0%]	[ 59.5%]	[ 60.0%]	[ 60.5%]	[ 61.0%]	[ 61.5%]	[ 62.0%]	[ 62.0%]	[ 62.5%]	[ 62.5%]	[ 63.0%]	[ 63.5%]	[ 63.5%]	[ 64.0%]	[ 64.5%]	[ 65.0%]	[ 65.0%]	[ 65.5%]	[ 65.5%]	[ 66.0%]	[ 66.0%]	[ 66.5%]	[ 67.0%]	[ 67.5%]	[ 68.0%]	[ 68.5%]	[ 69.0%]	[ 69.5%]	[ 70.0%]	[ 70.5%]	[ 71.5%]	[ 72.0%]	[ 72.5%]	[ 73.0%]	[ 73.5%]	[ 74.0%]	[ 74.5%]	[ 75.0%]	[ 75.5%]	[ 76.0%]	[ 76.5%]	[ 77.0%]	[ 77.5%]	[ 78.0%]	[ 78.5%]	[ 79.0%]	[ 79.5%]	[ 80.0%]	[ 80.5%]	[ 81.0%]	[ 81.5%]	[ 82.0%]	[ 82.5%]	[ 83.0%]	[ 83.5%]	[ 84.0%]	[ 84.5%]	[ 85.5%]	[ 86.0%]	[ 86.5%]	[ 87.0%]	[ 87.5%]	[ 88.0%]	[ 88.5%]	[ 89.0%]	[ 89.5%]	[ 90.0%]	[ 90.5%]	[ 91.0%]	[ 91.5%]	[ 92.0%]	[ 92.5%]	[ 93.0%]	[ 93.5%]	[ 94.0%]	[ 94.5%]	[ 95.0%]	[ 95.5%]	[ 96.0%]	[ 96.5%]	[ 97.0%]	[ 97.5%]	[ 98.0%]	[ 99.0%]	[ 99.5%]	[100.0%]
+Playing WAVE '/tmp/0.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+Successfully initialized wpa_supplicant
+crond[1155]: crond (busybox 1.31.0) started, log level 8
+
+p2029
+killall: rsyslogd: no process killed
+chpasswd: password for 'root' changed
+killall: wifi_manager: no process killed
+miio_client[1298]: [I] miio_client: Set data dir to: /etc/miio/
+miio_client[1298]: [I] miio_client: Set log level to: 0
+miio_client[1298]: [W] miio_client: version: miio-client 4.1.7 (main,277)
+miio_client[1321]: [I] miio_client_func: OT agent listen fd: 3
+miio_client[1321]: [I] miio_client_func: BT conn listen fd: 4
+miio_client[1321]: [I] miio_client: pollfds[0]: 3
+miio_client[1321]: [I] miio_client: pollfds[1]: 4
+miio_client[1321]: [I] miio_client_func: OT agent listen accept sockfd: 5
+miio_client[1321]: [I] miio_client_func: add_client_fd sockfd: 5
+miio_client[1321]: [D] miio_client_func: dump_poll_fd, poll fd count: 3
+miio_client[1321]: [D] miio_client_func: 3	4	5	
+miio_client[1321]: [D] miio_client_func: ------------------------------------------------------
+miio_client[1321]: [D] miio_client_func: dump_client_fd, client fd count: 1
+miio_client[1321]: [D] miio_client_func: 5	
+miio_client[1321]: [D] miio_client_func: ------------------------------------------------------
+killall: getty: no process killed
+
+p2029_release login: ROOT
+Password: 
+Login incorrect
+p2029_release login: root
+Password: 
+--------------------------------------------------------------
+    _   _   _                        _     _                  
+   / \ | |_| |__   ___ _ __   __ _  | |   (_)_ __  _   ___  __
+  / _ \| __| '_ \ / _ \ '_ \ / _` | | |   | | '_ \| | | \ \/ /
+ / ___ \ |_| | | |  __/ | | | (_| | | |___| | | | | |_| |>  < 
+/_/   \_\__|_| |_|\___|_| |_|\__,_| |_____|_|_| |_|\__,_/_/\_\
+                                                              
+--------------------------------------------------------------
+ Athena Linux (p2029_release)
+--------------------------------------------------------------
+
+平台组帮助文档(联网，固件升级，开发环境搭建等功能），查看帮助文档，请终端输入：cat /data/readme.md
+
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# ifconfig
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:443 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:443 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1 
+          RX bytes:42346 (41.3 KiB)  TX bytes:42346 (41.3 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr 24:18:C6:16:BC:FB  
+          inet addr:192.168.1.152  Bcast:192.168.1.255  Mask:255.255.255.0
+          inet6 addr: fe80::2618:c6ff:fe16:bcfb/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:773 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:246 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:131897 (128.8 KiB)  TX bytes:36519 (35.6 KiB)
+
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# top
+[H[JMem: 265304K used, 224804K free, 2664K shrd, 18432K buff, 62956K cached
+CPU:  4.6% usr  4.6% sys  0.0% nic 90.6% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 1.56 1.21 0.69 1/125 3884
+[7m  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND[m
+ 1244     1 root     S     864m180.3   2  7.4 ava -f /ava/conf/p2029.conf force
+ 3884  2106 root     R     3548  0.7   1  1.8 top
+ 1667     1 root     S     362m 75.6   0  0.0 miio_client -D -d/etc/miio/ -l0
+ 1343     1 root     S     212m 44.3   2  0.0 rsyslogd -f /etc/rsyslog.conf
+ 1287     1 root     S    78392 15.9   1  0.0 /usr/bin/exec_proc
+ 1135     1 root     S     6392  1.3   2  0.0 wpa_supplicant -B -iwlan0 -Dnl8021
+ 1328     1 root     S     4000  0.8   1  0.0 wifi_manager -B -c/etc/wifi/wifi_m
+ 1013     1 root     S     3784  0.7   0  0.0 mediad -c /ava/script/mediad_scrip
+ 1668     1 root     S     3588  0.7   1  0.0 {miio_client_hel} /bin/sh /usr/bin
+    1     0 root     S     3548  0.7   3  0.0 init
+ 1177     1 root     S     3548  0.7   1  0.0 {mediad_monitor.} /bin/sh /etc/rc.
+ 1183     1 root     S     3548  0.7   0  0.0 {exec_monitor.sh} /bin/sh /etc/rc.
+ 2368     1 root     S     3548  0.7   2  0.0 {monitor.sh} /bin/sh /etc/rc.d/mon
+ 2106  2092 root     S     3548  0.7   0  0.0 -sh
+  991     1 root     S     3548  0.7   2  0.0 {record_device_r} /bin/sh /usr/bin
+ 2092     1 root     S     3548  0.7   2  0.0 {open_getty.sh} /bin/sh /usr/bin/o
+ 2192     1 root     S     3548  0.7   0  0.0 crond
+ 1903     1 root     S     3548  0.7   0  0.0 udhcpc -i wlan0 -x hostname:U00964
+ 1011   991 root     S     3416  0.7   0  0.0 sleep 1800
+ 3850  2368 root     S     3416  0.7   0  0.0 sleep 30[H[JMem: 265336K used, 224772K free, 2684K shrd, 18436K buff, 62980K cached
+CPU:  4.0% usr  3.7% sys  0.0% nic 92.1% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 1.52 1.21 0.70 3/125 3892
+[7m  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND[m
+ 1244     1 root     R     864m180.3   1  7.3 ava -f /ava/conf/p2029.conf force
+ 3884  2106 root     R     3548  0.7   1  0.0 top
+ 1102     2 root     SW       0  0.0   1  0.0 [ksdioirqd/mmc0]
+ 1667     1 root     S     362m 75.6   0  0.0 miio_client -D -d/etc/miio/ -l0
+ 1328     1 root     S     4000  0.8   1  0.0 wifi_manager -B -c/etc/wifi/wifi_m
+ 1177     1 root     S     3548  0.7   1  0.0 {mediad_monitor.} /bin/sh /etc/rc.
+ 1183     1 root     S     3548  0.7   1  0.0 {exec_monitor.sh} /bin/sh /etc/rc.
+    5     2 root     SW       0  0.0   0  0.0 [kworker/u8:0]
+ 3137     2 root     SW       0  0.0   0  0.0 [kworker/u8:2]
+ 1343     1 root     S     212m 44.3   2  0.0 rsyslogd -f /etc/rsyslog.conf
+ 1287     1 root     S    78392 15.9   1  0.0 /usr/bin/exec_proc
+ 1135     1 root     S     6392  1.3   2  0.0 wpa_supplicant -B -iwlan0 -Dnl8021
+ 1013     1 root     S     3784  0.7   0  0.0 mediad -c /ava/script/mediad_scrip
+ 1668     1 root     S     3588  0.7   1  0.0 {miio_client_hel} /bin/sh /usr/bin
+    1     0 root     S     3548  0.7   3  0.0 init
+ 2368     1 root     S     3548  0.7   2  0.0 {monitor.sh} /bin/sh /etc/rc.d/mon
+ 2106  2092 root     S     3548  0.7   0  0.0 -sh
+  991     1 root     S     3548  0.7   2  0.0 {record_device_r} /bin/sh /usr/bin
+ 2092     1 root     S     3548  0.7   2  0.0 {open_getty.sh} /bin/sh /usr/bin/o
+ 2192     1 root     S     3548  0.7   0  0.0 crond
+[root@p2029_release:~]# free -m
+              total        used        free      shared  buff/cache   available
+Mem:            478         179         219           2          79         301
+Swap:             0           0           0
+[root@p2029_release:~]# cat /proc/cpuinfo
+processor	: 0
+BogoMIPS	: 48.00
+Features	: fp asimd aes pmull sha1 sha2 crc32
+CPU implementer	: 0x41
+CPU architecture: 8
+CPU variant	: 0x0
+CPU part	: 0xd03
+CPU revision	: 4
+
+processor	: 1
+BogoMIPS	: 48.00
+Features	: fp asimd aes pmull sha1 sha2 crc32
+CPU implementer	: 0x41
+CPU architecture: 8
+CPU variant	: 0x0
+CPU part	: 0xd03
+CPU revision	: 4
+
+processor	: 2
+BogoMIPS	: 48.00
+Features	: fp asimd aes pmull sha1 sha2 crc32
+CPU implementer	: 0x41
+CPU architecture: 8
+CPU variant	: 0x0
+CPU part	: 0xd03
+CPU revision	: 4
+
+processor	: 3
+BogoMIPS	: 48.00
+Features	: fp asimd aes pmull sha1 sha2 crc32
+CPU implementer	: 0x41
+CPU architecture: 8
+CPU variant	: 0x0
+CPU part	: 0xd03
+CPU revision	: 4
+
+[root@p2029_release:~]# [root@p2029_release:~]# cat /proc/cpuinfo[J[root@p2029_release:~]# free -m[J[root@p2029_release:~]# top[J[root@p2029_release:~]# ifconfig[J[J[J[J[J[J[J[J[J
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# ipr [J[J -a
+BusyBox v1.31.0 (2020-04-23 20:29:48 CST) multi-call binary.
+
+Usage: ip [OPTIONS] address|route|link|tunnel|neigh|rule [ARGS]
+
+OPTIONS := -f[amily] inet|inet6|link | -o[neline]
+
+ip addr add|del IFADDR dev IFACE | show|flush [dev IFACE] [to PREFIX]
+ip route list|flush|add|del|change|append|replace|test ROUTE
+ip link set IFACE [up|down] [arp on|off] [multicast on|off]
+	[promisc on|off] [mtu NUM] [name NAME] [qlen NUM] [address MAC]
+	[master IFACE | nomaster]
+ip tunnel add|change|del|show [NAME]
+	[mode ipip|gre|sit] [remote ADDR] [local ADDR] [ttl TTL]
+ip neigh show|flush [to PREFIX] [dev DEV] [nud STATE]
+ip rule [list] | add|del SELECTOR ACTION
+[root@p2029_release:~]# ip 
+BusyBox v1.31.0 (2020-04-23 20:29:48 CST) multi-call binary.
+
+Usage: ip [OPTIONS] address|route|link|tunnel|neigh|rule [ARGS]
+
+OPTIONS := -f[amily] inet|inet6|link | -o[neline]
+
+ip addr add|del IFADDR dev IFACE | show|flush [dev IFACE] [to PREFIX]
+ip route list|flush|add|del|change|append|replace|test ROUTE
+ip link set IFACE [up|down] [arp on|off] [multicast on|off]
+	[promisc on|off] [mtu NUM] [name NAME] [qlen NUM] [address MAC]
+	[master IFACE | nomaster]
+ip tunnel add|change|del|show [NAME]
+	[mode ipip|gre|sit] [remote ADDR] [local ADDR] [ttl TTL]
+ip neigh show|flush [to PREFIX] [dev DEV] [nud STATE]
+ip rule [list] | add|del SELECTOR ACTION
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# ifconfig
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:483 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:483 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1 
+          RX bytes:45912 (44.8 KiB)  TX bytes:45912 (44.8 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr 24:18:C6:16:BC:FB  
+          inet addr:192.168.1.152  Bcast:192.168.1.255  Mask:255.255.255.0
+          inet6 addr: fe80::2618:c6ff:fe16:bcfb/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1989 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:487 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:315060 (307.6 KiB)  TX bytes:65393 (63.8 KiB)
+
+[root@p2029_release:~]# tar cvf /tmp/backup.tar /mnt/private/ /mnt/misc/ /etc/OT
+A_Key_pub.pem /etc/publickey.pem[1A[79Csc/ /etc/OT
+A_Key_pub.pem /etc/publickey.pem
+tar: removing leading '/' from member names
+mnt/private/
+mnt/private/ULI/
+mnt/private/ULI/factory/
+mnt/private/ULI/factory/sn.txt
+mnt/private/ULI/factory/did.txt
+mnt/private/ULI/factory/key.txt
+mnt/private/ULI/factory/mac.txt
+mnt/private/ULI/factory/timezone.txt
+mnt/private/ULI/factory/language.txt
+mnt/private/ULI/factory/nation.txt
+mnt/private/ULI/factory/cpuid.txt
+mnt/misc/
+mnt/misc/lost+found/
+mnt/misc/totalruntime
+mnt/misc/caliberation_result.json
+mnt/misc/lds_config.json
+mnt/misc/consumable.json
+mnt/misc/dataset.txt
+mnt/misc/wifi_id.flag
+etc/OTA_Key_pub.pem
+etc/publickey.pem
+[root@p2029_release:~]# ls -la
+total 124
+drwxrwxrwt    8 root     root           620 Sep  6 05:44 [1;34m.[m
+drwxrwxr-x   16 root     root           286 Jun 24  2021 [1;34m..[m
+-rw-------    1 root     root           154 Sep  6 05:44 [0;0m.ash_history[m
+-rw-r--r--    1 root     root             0 Jan  1  1970 [0;0m1.txt[m
+-rw-r--r--    1 root     root             5 Jan  1  1970 [0;0mava.pid[m
+-rw-r--r--    1 root     root         26447 Jan  1  1970 [0;0mava_maps.log[m
+srwxr-xr-x    1 root     root             0 Jan  1  1970 [1;35mavacmd.socket[m
+-rw-r--r--    1 root     root          1193 Sep  6 05:21 [0;0mavaexec.log[m
+srwxr-xr-x    1 root     root             0 Jan  1  1970 [1;35mavaexec.socket[m
+-rw-r--r--    1 root     root         45056 Sep  6 05:44 [0;0mbackup.tar[m
+-rw-r--r--    1 root     root          2657 Sep  6 05:21 [0;0mcurl.log[m
+-rw-r--r--    1 root     root           192 Jan  1  1970 [0;0mfactory_reset.conf[m
+drwxr-xr-x    2 root     root            40 Jan  1  1970 [1;34mleft[m
+drwxr-xr-x    3 root     root           120 Sep  6 05:22 [1;34mlog[m
+-rw-r--r--    1 root     root           142 Sep  6 05:21 [0;0mlog_err_exec[m
+-rw-r--r--    1 root     root           105 Sep  6 05:21 [0;0mls.txt[m
+-rw-r--r--    1 root     root          1001 Sep  6 05:44 [0;0mmonitor_file[m
+-rw-r--r--    1 root     root            25 Sep  6 05:21 [0;0mmult_map.bin[m
+drwxr-xr-x    2 root     root            40 Jan  1  1970 [1;34mpic[m
+-rw-r--r--    1 root     root           729 Sep  6 05:44 [0;0mping.log[m
+-rw-r--r--    1 root     root             0 Sep  6 05:21 [0;0mregister.log[m
+drwxr-xr-x    2 root     root            40 Jan  1  1970 [1;34mright[m
+drwxr-xr-x    4 root     root            80 Jan  1  1970 [1;34mroot[m
+drwxr-xr-x    2 root     root            40 Jan  1  1970 [1;34mrun[m
+-rw-r--r--    1 root     root            92 Sep  6 05:21 [0;0mtest.log[m
+-rw-r--r--    1 root     root          1216 Jan  1  1970 [0;0mversion_check[m
+-rw-r--r--    1 root     root             0 Jan  1  1970 [0;0mwifi_connect.flag[m
+srwxr-xr-x    1 root     root             0 Jan  1  1970 [1;35mwifi_ctrl_1308-1[m
+srwxr-xr-x    1 root     root             0 Jan  1  1970 [1;35mwifi_ctrl_1308-2[m
+srwxr-xr-x    1 root     root             0 Jan  1  1970 [1;35mwifi_manager.sock[m
+-rw-r--r--    1 root     root             1 Sep  6 05:44 [0;0mwifi_monitor.cnt[m
+[root@p2029_release:~]# [root@p2029_release:~]# ls -la[J[root@p2029_release:~]# tar cvf /tmp/backup.tar /mnt/private/ /mnt/misc/ /etc/OT
+A_Key_pub.pem /etc/publickey.pem[J[1A[root@p2029_release:~]# ifconfig[J[root@p2029_release:~]# ip [J[root@p2029_release:~]# ip -a[J[root@p2029_release:~]# cat /proc/cpuinfo[J[root@p2029_release:~]# free -m[J[root@p2029_release:~]# top[J[root@p2029_release:~]# ifconfig[J[J[J[J[J[J[J[J[J
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# tar cvf /tmp/backup.tar /mnt/private/ /mnt/misc/ /etc/OT
+A_Key_pub.pem /etc/publickey.pem[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[1A[79C[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[Jcurl -X POST http://192.168.1.137:41857/upload -F 'file=
+@./file.tar'
+curl: (26) Failed to open/read local data from file/application
+[root@p2029_release:~]# [root@p2029_release:~]# curl -X POST http://192.168.1.137:41857/upload -F 'file=
+@./file.tar'[J/file.tar'[J[10D//file.tar'[10Dt/file.tar'[10Dm/file.tar'[10Dp/file.tar'[10D/file.tar'[J[5D.tar'[J[5D.tar'[J[5D.tar'[J[5Db.tar'[5Da.tar'[5Dc.tar'[5Dk.tar'[5Du.tar'[5Dp.tar'[5D.tar'
+Successfully uploaded file to "/home/ipeacocks/Downloads/www/uploads/backup.tar"
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# [root@p2029_release:~]# curl -X POST http://192.168.1.137:41857/upload -F 'file=
+@/tmp/backup.tar'[J[1A[root@p2029_release:~]# curl -X POST http://192.168.1.137:41857/upload -F 'file=
+@./file.tar'[J[1A[root@p2029_release:~]# ls -la[J[root@p2029_release:~]# tar cvf /tmp/backup.tar /mnt/private/ /mnt/misc/ /etc/OT
+A_Key_pub.pem /etc/publickey.pem[J[1A[root@p2029_release:~]# ifconfig[J[root@p2029_release:~]# ip [J[root@p2029_release:~]# ip -a[J[root@p2029_release:~]# cat /proc/cpuinfo[J[root@p2029_release:~]# free -m[J[root@p2029_release:~]# top[J[root@p2029_release:~]# ifconfig[J[J[J[J[J[J[J[J[J
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# wget http://192.168.5.101:33671/dreame.vacuum.p2029_fw.t
+ar.gz
+--2022-09-06 06:19:18--  http://192.168.5.101:33671/dreame.vacuum.p2029_fw.tar.gz
+Connecting to 192.168.5.101:33671... ^C
+[root@p2029_release:~]# [root@p2029_release:~]# wget http://192.168.5.101:33671/dreame.vacuum.p2029_fw.t
+ar.gz[J[1A[79C.101:33671/dreame.vacuum.p2029_fw.ta
+r.gz[J[1A[44C1.101:33671/dreame.vacuum.p2029_fw.t
+ar.gz[1A[45C.101:33671/dreame.vacuum.p2029_fw.ta
+r.gz[J[1A[48C:33671/dreame.vacuum.p2029_fw.tar
+.gz[J[1A[47C3:33671/dreame.vacuum.p2029_fw.ta
+r.gz[1A[48C7:33671/dreame.vacuum.p2029_fw.t
+ar.gz[1A[49C:33671/dreame.vacuum.p2029_fw.t
+ar.gz
+--2022-09-06 06:19:39--  http://192.168.1.137:33671/dreame.vacuum.p2029_fw.tar.gz
+Connecting to 192.168.1.137:33671... failed: Connection refused.
+[root@p2029_release:~]# [root@p2029_release:~]# wget http://192.168.1.137:33671/dreame.vacuum.p2029_fw.t
+ar.gz[J[1A[79Ce/dreame.vacuum.p2029_fw.ta
+r.gz[J[1A[54C/dreame.vacuum.p2029_fw.tar
+.gz[J[1A[53C/dreame.vacuum.p2029_fw.tar.
+gz[J[1A[52C/dreame.vacuum.p2029_fw.tar.g
+z[J[1A[51C/dreame.vacuum.p2029_fw.tar.gz
+[J[1A[50C4/dreame.vacuum.p2029_fw.tar.g
+z[1A[51C1/dreame.vacuum.p2029_fw.tar.
+gz[1A[52C8/dreame.vacuum.p2029_fw.tar
+.gz[1A[53C5/dreame.vacuum.p2029_fw.ta
+r.gz[1A[54C7/dreame.vacuum.p2029_fw.t
+ar.gz[1A[55C/dreame.vacuum.p2029_fw.t
+ar.gz
+--2022-09-06 06:19:51--  http://192.168.1.137:41857/dreame.vacuum.p2029_fw.tar.gz
+Connecting to 192.168.1.137:41857... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 48076465 (46M) [application/gzip]
+Saving to: 'dreame.vacuum.p2029_fw.tar.gz'
+
+          dreame.va   0%[                    ]       0  --.-KB/s                        dreame.vac   1%[                    ] 694.00K  3.25MB/s                       dreame.vacu   2%[                    ]   1.36M  3.33MB/s                      dreame.vacuu   3%[                    ]   1.43M  1.56MB/s                     dreame.vacuum   4%[                    ]   2.25M  2.02MB/s                    dreame.vacuum.   6%[>                   ]   3.10M  2.36MB/s                   dreame.vacuum.p   8%[>                   ]   4.03M  2.66MB/s                  dreame.vacuum.p2  10%[=>                  ]   4.85M  2.83MB/s                 dreame.vacuum.p20  12%[=>                  ]   5.77M  3.01MB/s                dreame.vacuum.p202  13%[=>                  ]   6.39M  3.02MB/s               dreame.vacuum.p2029  15%[==>                 ]   7.06M  3.04MB/s               reame.vacuum.p2029_  16%[==>                 ]   7.59M  3.00MB/s               eame.vacuum.p2029_f  17%[==>                 ]   8.22M  3.01MB/s               ame.vacuum.p2029_fw  19%[==>                 ]   9.03M  3.08MB/s               me.vacuum.p2029_fw.  21%[===>                ]   9.80M  3.13MB/s    eta 12s    e.vacuum.p2029_fw.t  22%[===>                ]  10.50M  3.14MB/s    eta 12s    .vacuum.p2029_fw.ta  24%[===>                ]  11.45M  3.22MB/s    eta 12s    vacuum.p2029_fw.tar  26%[====>               ]  12.36M  3.30MB/s    eta 12s    acuum.p2029_fw.tar.  29%[====>               ]  13.33M  3.46MB/s    eta 12s    cuum.p2029_fw.tar.g  31%[=====>              ]  14.29M  3.97MB/s    eta 9s     uum.p2029_fw.tar.gz  33%[=====>              ]  15.17M  3.98MB/s    eta 9s     um.p2029_fw.tar.gz   35%[======>             ]  16.13M  4.01MB/s    eta 9s     m.p2029_fw.tar.gz    37%[======>             ]  16.98M  3.99MB/s    eta 9s     .p2029_fw.tar.gz     38%[======>             ]  17.84M  3.99MB/s    eta 9s     p2029_fw.tar.gz      40%[=======>            ]  18.73M  3.99MB/s    eta 7s     2029_fw.tar.gz       42%[=======>            ]  19.66M  4.15MB/s    eta 7s     029_fw.tar.gz        44%[=======>            ]  20.53M  4.22MB/s    eta 7s     29_fw.tar.gz         46%[========>           ]  21.31M  4.30MB/s    eta 7s     9_fw.tar.gz          48%[========>           ]  22.24M  4.37MB/s    eta 7s     _fw.tar.gz           50%[=========>          ]  23.14M  4.43MB/s    eta 6s     fw.tar.gz            52%[=========>          ]  24.03M  4.47MB/s    eta 6s     w.tar.gz             54%[=========>          ]  24.93M  4.47MB/s    eta 6s     .tar.gz              56%[==========>         ]  25.78M  4.45MB/s    eta 6s     tar.gz               58%[==========>         ]  26.66M  4.44MB/s    eta 6s     ar.gz                60%[===========>        ]  27.55M  4.41MB/s    eta 5s     r.gz                 62%[===========>        ]  28.43M  4.42MB/s    eta 5s     .gz                  63%[===========>        ]  29.26M  4.39MB/s    eta 5s     gz                   65%[============>       ]  30.15M  4.38MB/s    eta 5s     z                    67%[============>       ]  31.04M  4.39MB/s    eta 5s                          69%[============>       ]  31.93M  4.40MB/s    eta 4s                       d  71%[=============>      ]  32.83M  4.38MB/s    eta 4s                      dr  73%[=============>      ]  33.76M  4.39MB/s    eta 4s                     dre  75%[==============>     ]  34.68M  4.40MB/s    eta 4s                    drea  77%[==============>     ]  35.57M  4.43MB/s    eta 4s                   dream  79%[==============>     ]  36.57M  4.45MB/s    eta 2s                  dreame  81%[===============>    ]  37.53M  4.46MB/s    eta 2s                 dreame.  83%[===============>    ]  38.51M  4.49MB/s    eta 2s                dreame.v  86%[================>   ]  39.44M  4.50MB/s    eta 2s               dreame.va  88%[================>   ]  40.39M  4.55MB/s    eta 2s              dreame.vac  90%[=================>  ]  41.34M  4.55MB/s    eta 1s             dreame.vacu  90%[=================>  ]  41.52M  4.34MB/s    eta 1s            dreame.vacuu  92%[=================>  ]  42.23M  4.27MB/s    eta 1s           dreame.vacuum  94%[=================>  ]  43.17M  4.29MB/s    eta 1s          dreame.vacuum.  95%[==================> ]  43.87M  4.25MB/s    eta 1s         dreame.vacuum.p  97%[==================> ]  44.63M  4.20MB/s    eta 0s        dreame.vacuum.p2  99%[==================> ]  45.54M  4.19MB/s    eta 0s     dreame.vacuum.p2029 100%[===================>]  45.85M  4.19MB/s    in 11s     
+
+2022-09-06 06:20:03 (4.00 MB/s) - 'dreame.vacuum.p2029_fw.tar.gz' saved [48076465/48076465]
+
+[root@p2029_release:~]# pwd
+/tmp
+[root@p2029_release:~]# tar -xvzf dreame.[root@p2029_release:~]# tar -xvzf dreame.vacuum.p2029_fw.tar.gz [J
+./boot.img
+./rootfs.img
+./mcu_md5sum
+mcu.bin
+./firmware.md5sum
+./install.sh
+./install-manual.sh
+./install-mcufw.sh
+./valetudo
+./_root_postboot.sh.tpl
+[root@p2029_release:~]# ls -la
+total 116328
+drwxrwxrwt    8 root     root           860 Sep  6 06:20 [1;34m.[m
+drwxrwxr-x   16 root     root           286 Jun 24  2021 [1;34m..[m
+-rw-------    1 root     root           535 Sep  6 06:20 [0;0m.ash_history[m
+-rw-r--r--    1 root     root             0 Jan  1  1970 [0;0m1.txt[m
+-rwxr-xr-x    1 1000     1000           482 Sep  6 06:08 [1;32m_root_postboot.sh.tpl[m
+-rw-r--r--    1 root     root             5 Jan  1  1970 [0;0mava.pid[m
+-rw-r--r--    1 root     root         26447 Jan  1  1970 [0;0mava_maps.log[m
+-rw-r--r--    1 root     root          1001 Sep  6 06:00 [0;0mava_status.log[m
+srwxr-xr-x    1 root     root             0 Jan  1  1970 [1;35mavacmd.socket[m
+-rw-r--r--    1 root     root          1514 Sep  6 05:47 [0;0mavaexec.log[m
+srwxr-xr-x    1 root     root             0 Jan  1  1970 [1;35mavaexec.socket[m
+-rw-r--r--    1 root     root         45056 Sep  6 05:44 [0;0mbackup.tar[m
+-rw-r--r--    1 1000     1000      10268672 Apr 17 11:00 [0;0mboot.img[m
+-rw-r--r--    1 root     root          2657 Sep  6 05:21 [0;0mcurl.log[m
+-rw-r--r--    1 root     root      48076465 Sep  6 06:17 [0;0mdreame.vacuum.p2029_fw.tar.gz[m
+-rw-r--r--    1 root     root           192 Jan  1  1970 [0;0mfactory_reset.conf[m
+-rw-rw-r--    1 1000     1000            92 Sep  6 06:08 [0;0mfirmware.md5sum[m
+-rwxrwxr-x    1 1000     1000          3341 Sep  6 06:08 [1;32minstall-manual.sh[m
+-rwxr-xr-x    1 1000     1000           514 Sep  6 06:08 [1;32minstall-mcufw.sh[m
+-rwxrwxr-x    1 1000     1000          2454 Sep  6 06:08 [1;32minstall.sh[m
+drwxr-xr-x    2 root     root            40 Jan  1  1970 [1;34mleft[m
+drwxr-xr-x    3 root     root           120 Sep  6 05:22 [1;34mlog[m
+-rw-r--r--    1 root     root           188 Sep  6 05:46 [0;0mlog_err_exec[m
+-rw-r--r--    1 root     root           105 Sep  6 06:19 [0;0mls.txt[m
+-rw-r--r--    1 1000     1000        144100 Apr 17 11:00 [0;0mmcu.bin[m
+-rw-r--r--    1 1000     1000           167 Apr 17 11:00 [0;0mmcu_md5sum[m
+-rw-r--r--    1 root     root          1001 Sep  6 06:20 [0;0mmonitor_file[m
+-rw-r--r--    1 root     root            25 Sep  6 05:21 [0;0mmult_map.bin[m
+drwxr-xr-x    2 root     root            40 Jan  1  1970 [1;34mpic[m
+-rw-r--r--    1 root     root           734 Sep  6 06:20 [0;0mping.log[m
+-rw-r--r--    1 root     root             0 Sep  6 05:21 [0;0mregister.log[m
+drwxr-xr-x    2 root     root            40 Jan  1  1970 [1;34mright[m
+drwxr-xr-x    4 root     root            80 Jan  1  1970 [1;34mroot[m
+-rw-rw-r--    1 1000     1000      29884416 Sep  6 06:08 [0;0mrootfs.img[m
+drwxr-xr-x    2 root     root            40 Jan  1  1970 [1;34mrun[m
+-rw-r--r--    1 root     root           184 Sep  6 05:47 [0;0mtest.log[m
+-rwxr-xr-x    1 1000     1000      30580848 Sep  6 06:08 [1;32mvaletudo[m
+-rw-r--r--    1 root     root          1216 Jan  1  1970 [0;0mversion_check[m
+-rw-r--r--    1 root     root             0 Jan  1  1970 [0;0mwifi_connect.flag[m
+srwxr-xr-x    1 root     root             0 Jan  1  1970 [1;35mwifi_ctrl_1308-1[m
+srwxr-xr-x    1 root     root             0 Jan  1  1970 [1;35mwifi_ctrl_1308-2[m
+srwxr-xr-x    1 root     root             0 Jan  1  1970 [1;35mwifi_manager.sock[m
+-rw-r--r--    1 root     root             1 Sep  6 06:20 [0;0mwifi_monitor.cnt[m
+[root@p2029_release:~]# [root@p2029_release:~]# ls -la[J[root@p2029_release:~]# tar -xvzf dreame.vacuum.p2029_fw.tar.gz [J[root@p2029_release:~]# pwd[J[root@p2029_release:~]# wget http://192.168.1.137:41857/dreame.vacuum.p2029_fw.t
+ar.gz[J[1A[root@p2029_release:~]# wget http://192.168.1.137:33671/dreame.vacuum.p2029_fw.t
+ar.gz[J[1A[root@p2029_release:~]# wget http://192.168.5.101:33671/dreame.vacuum.p2029_fw.t
+ar.gz[J[1A[root@p2029_release:~]# curl -X POST http://192.168.1.137:41857/upload -F 'file=
+@/tmp/backup.tar'[J[1A[root@p2029_release:~]# curl -X POST http://192.168.1.137:41857/upload -F 'file=
+@./file.tar'[J[1A[root@p2029_release:~]# ls -la[J[root@p2029_release:~]# tar cvf /tmp/backup.tar /mnt/private/ /mnt/misc/ /etc/OT
+A_Key_pub.pem /etc/publickey.pem[J[1A[root@p2029_release:~]# ifconfig[J[root@p2029_release:~]# ip [J[root@p2029_release:~]# ip -a[J[root@p2029_release:~]# cat /proc/cpuinfo[J[root@p2029_release:~]# free -m[J[root@p2029_release:~]# top[J[root@p2029_release:~]# ifconfig[J[J[J[J[J[J[J[J[J./inst[root@p2029_release:~]# ./install[J.[root@p2029_release:~]# ./install.sh [J
+---------------------------------------------------------------------------
+ Dreame manual Firmware installer
+ Copyright 2020 by Dennis Giese [dgiese at dontvacuum.me]
+ Intended to work on mc1808,p2008,p2009,p2041
+ Version: dreame.vacuum.p2029
+ Use at your own risk
+---------------------------------------------------------------------------
+model=dreame.vacuum.p2029
+check image file size
+Checking integrity
+./boot.img: OK
+./rootfs.img: OK
+Start installation ... the robot will automatically reboot after the installation is complete (DO NOT REBOOT YOURSELF)
+Preparation complete, will install valetudo first
+killall: valetudo: no process killed
+rm: can't remove '/data/valetudo': No such file or directory
+Valetudo installation finished, continue FW update
+{"ret":"ok"}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+[root@p2029_release:~]# [340]HELLO! SBOOT is starting!
+[343]sboot commit : 9341f18 
+NOTICE:  BL3-1: v1.0(debug):b108d89
+NOTICE:  BL3-1: Built : 14:13:35, 2020-04-08
+NOTICE:  BL3-1 commit: 8
+NOTICE:  secure os exist
+MESSAGE: [0x0] TEE-CORE: OP-TEE version: 5f533bf9-dirty #1 2020年 08月 08日 星期六 03:04:16 UTC arm
+NOTICE:  BL3-1: Preparing for EL3 exit to normal world
+NOTICE:  BL3-1: Next image address = 0x4a000000
+NOTICE:  BL3-1: Next image spsr = 0x1d3[SCP] :sunxi-arisc driver begin startup 2
+[SCP] :0x1
+[SCP] :arisc version: []
+[SCP] :arisc startup ready
+[SCP] :arisc startup notify message feedback
+[SCP] :send hard sync feedback message: 0x900200
+[SCP] :sunxi-arisc driver v1.10 is starting
+numid=13,iface=MIXER,name='Headphone Switch'
+  ; type=BOOLEAN,access=rw------,values=1
+  : values=on
+numid=9,iface=MIXER,name='Headphone Volume'
+  ; type=INTEGER,access=rw---R--,values=1,min=0,max=7,step=0
+  : values=3
+  | dBscale-min=-42.00dB,step=6.00dB,mute=0
+numid=10,iface=MIXER,name='LINEOUT Output Select'
+  ; type=ENUMERATED,access=rw------,values=1,items=2
+  ; Item #0 'DAC_SINGLE'
+  ; Item #1 'DAC_DIFFER'
+  : values=1
+numid=15,iface=MIXER,name='LINEOUT Switch'
+  ; type=BOOLEAN,access=rw------,values=1
+  : values=on
+numid=6,iface=MIXER,name='LINEOUT volume'
+  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
+  : values=31
+  | dBrange-
+    rangemin=0,,rangemax=1
+      | dBscale-min=0.00dB,step=0.00dB,mute=1
+    rangemin=2,,rangemax=31
+      | dBscale-min=-43.50dB,step=1.50dB,mute=1
+
+numid=11,iface=MIXER,name='ADCL Input MIC1 Boost Switch'
+  ; type=BOOLEAN,access=rw------,values=1
+  : values=on
+numid=4,iface=MIXER,name='MIC1 gain volume'
+  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
+  : values=0
+  | dBscale-min=0.00dB,step=1.00dB,mute=0
+numid=12,iface=MIXER,name='ADCR Input MIC2 Boost Switch'
+  ; type=BOOLEAN,access=rw------,values=1
+  : values=on
+numid=5,iface=MIXER,name='MIC2 gain volume'
+  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
+  : values=0
+  | dBscale-min=0.00dB,step=1.00dB,mute=0
+e2fsck 1.43.9 (8-Feb-2018)
+ext2fs_check_if_mount: Can't check if filesystem is mounted due to missing mtab file while determining whether /dev/by-name/misc is mounted.
+/dev/by-name/misc: recovering journal
+/dev/by-name/misc: clean, 17/256 files, 1119/2048 blocks
+killall: rsyslogd: no process killed
+Failed to connect to ubus
+crond[1181]: crond (busybox 1.31.0) started, log level 8
+
+chpasswd: password for 'root' changed
+--------------------------------------------------------------
+    _   _   _                        _     _                  
+   / \ | |_| |__   ___ _ __   __ _  | |   (_)_ __  _   ___  __
+  / _ \| __| '_ \ / _ \ '_ \ / _` | | |   | | '_ \| | | \ \/ /
+ / ___ \ |_| | | |  __/ | | | (_| | | |___| | | | | |_| |>  < 
+/_/   \_\__|_| |_|\___|_| |_|\__,_| |_____|_|_| |_|\__,_/_/\_\
+                                                              
+--------------------------------------------------------------
+ Athena Linux (p2029_release)
+--------------------------------------------------------------
+
+build with dustbuilder (https://builder.dontvacuum.me)
+Mon 05 Sep 2022 10:08:22 PM UTC
+1138
+[root@p2029_release:/]# crond[1181]: time disparity of 27706942 minutes detected
+
+crond[1181]: USER root pid 1993 cmd /etc/rc.d/wifi_monitor.sh
+
+crond[1181]: USER root pid 1994 cmd /etc/rc.d/iot_sdk_monitor.sh
+
+crond[1181]: USER root pid 1995 cmd /usr/bin/get_ava_status.sh
+
+
+[root@p2029_release:/]# crond[1181]: USER root pid 2155 cmd /etc/rc.d/wifi_monitor.sh
+
+crond[1181]: USER root pid 2156 cmd /etc/rc.d/iot_sdk_monitor.sh
+
+crond[1181]: USER root pid 2157 cmd /usr/bin/get_ava_status.sh
+
+
+[root@p2029_release:/]# 
+[root@p2029_release:/]# 
+[root@p2029_release:/]# 
+[root@p2029_release:/]# 
+[root@p2029_release:/]# 
+[root@p2029_release:/]# wget http://[J[J[J[J[J[J[J[J[J[J[J[Jhttp://192.168.1.137:41857/dreame.vacuum.p2029_fw.tar.gz
+^C
+[root@p2029_release:/]# 
+[root@p2029_release:/]# 
+[root@p2029_release:/]# wget http://192.168.1.137:41857/dreame.vacuum.p2029_fw.t
+ar.gz
+--2022-09-05 22:24:52--  http://192.168.1.137:41857/dreame.vacuum.p2029_fw.tar.gz
+Connecting to 192.168.1.137:41857... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 48076465 (46M) [application/gzip]
+dreame.vacuum.p2029_fw.tar.gz: Read-only file system
+
+Cannot write to 'dreame.vacuum.p2029_fw.tar.gz' (Read-only file system).
+[root@p2029_release:/]# cd /tmp
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# crond[1181]: USER root pid 2351 cmd /etc/rc.d/wifi_monitor.sh
+
+crond[1181]: USER root pid 2352 cmd /etc/rc.d/iot_sdk_monitor.sh
+
+crond[1181]: USER root pid 2353 cmd /usr/bin/get_ava_status.sh
+
+crond[1181]: USER root pid 2354 cmd /usr/bin/report_data.sh net_quality
+
+
+[root@p2029_release:~]# http://192.168.1.137:41857/dreame.vacuum.p2029_fw.tar.gz
+[1A[79Cwhttp://192.168.1.137:41857/dreame.vacuum.p2029_fw.tar.g
+z[1A[25Cghttp://192.168.1.137:41857/dreame.vacuum.p2029_fw.tar.
+gz[1A[26Cehttp://192.168.1.137:41857/dreame.vacuum.p2029_fw.tar
+.gz[1A[27Cthttp://192.168.1.137:41857/dreame.vacuum.p2029_fw.ta
+r.gz[1A[28C http://192.168.1.137:41857/dreame.vacuum.p2029_fw.t
+ar.gz[1A[29Chttp://192.168.1.137:41857/dreame.vacuum.p2029_fw.t
+ar.gz
+--2022-09-05 22:25:08--  http://192.168.1.137:41857/dreame.vacuum.p2029_fw.tar.gz
+Connecting to 192.168.1.137:41857... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 48076465 (46M) [application/gzip]
+Saving to: 'dreame.vacuum.p2029_fw.tar.gz'
+
+          dreame.va   0%[                    ]       0  --.-KB/s                        dreame.vac   0%[                    ] 162.31K   707KB/s                       dreame.vacu   0%[                    ] 213.21K   439KB/s                      dreame.vacuu   0%[                    ] 266.95K   352KB/s                     dreame.vacuum   1%[                    ] 500.27K   522KB/s                    dreame.vacuum.   1%[                    ] 590.77K   396KB/s                   dreame.vacuum.p   1%[                    ] 661.47K   331KB/s                  dreame.vacuum.p2   3%[                    ]   1.60M   745KB/s                 dreame.vacuum.p20   5%[>                   ]   2.40M  1022KB/s                dreame.vacuum.p202   7%[>                   ]   3.32M  1.28MB/s               dreame.vacuum.p2029   9%[>                   ]   4.29M  1.53MB/s               reame.vacuum.p2029_  11%[=>                  ]   5.25M  1.75MB/s    eta 23s    eame.vacuum.p2029_f  13%[=>                  ]   6.11M  1.91MB/s    eta 23s    ame.vacuum.p2029_fw  15%[==>                 ]   6.98M  2.05MB/s    eta 23s    me.vacuum.p2029_fw.  17%[==>                 ]   7.99M  2.22MB/s    eta 23s    e.vacuum.p2029_fw.t  19%[==>                 ]   8.94M  2.35MB/s    eta 23s    .vacuum.p2029_fw.ta  21%[===>                ]   9.80M  2.45MB/s    eta 15s    vacuum.p2029_fw.tar  23%[===>                ]  10.69M  2.62MB/s    eta 15s    acuum.p2029_fw.tar.  25%[====>               ]  11.60M  3.10MB/s    eta 15s    cuum.p2029_fw.tar.g  27%[====>               ]  12.57M  3.30MB/s    eta 15s    uum.p2029_fw.tar.gz  29%[====>               ]  13.49M  3.87MB/s    eta 15s    um.p2029_fw.tar.gz   31%[=====>              ]  14.43M  4.55MB/s    eta 11s    m.p2029_fw.tar.gz    33%[=====>              ]  15.33M  4.53MB/s    eta 11s    .p2029_fw.tar.gz     35%[======>             ]  16.23M  4.53MB/s    eta 11s    p2029_fw.tar.gz      37%[======>             ]  17.13M  4.54MB/s    eta 11s    2029_fw.tar.gz       39%[======>             ]  18.05M  4.52MB/s    eta 11s    029_fw.tar.gz        41%[=======>            ]  18.98M  4.51MB/s    eta 9s     29_fw.tar.gz         43%[=======>            ]  19.87M  4.50MB/s    eta 9s     9_fw.tar.gz          45%[========>           ]  20.82M  4.51MB/s    eta 9s     _fw.tar.gz           47%[========>           ]  21.72M  4.50MB/s    eta 9s     fw.tar.gz            49%[========>           ]  22.61M  4.45MB/s    eta 9s     w.tar.gz             51%[=========>          ]  23.53M  4.46MB/s    eta 7s     .tar.gz              53%[=========>          ]  24.45M  4.48MB/s    eta 7s     tar.gz               55%[==========>         ]  25.35M  4.48MB/s    eta 7s     ar.gz                57%[==========>         ]  26.25M  4.45MB/s    eta 7s     r.gz                 59%[==========>         ]  27.17M  4.46MB/s    eta 7s     .gz                  61%[===========>        ]  28.04M  4.43MB/s    eta 5s     gz                   63%[===========>        ]  28.89M  4.41MB/s    eta 5s     z                    65%[============>       ]  29.81M  4.42MB/s    eta 5s                          66%[============>       ]  30.62M  4.39MB/s    eta 5s                       d  68%[============>       ]  31.45M  4.36MB/s    eta 5s                      dr  70%[=============>      ]  32.22M  4.31MB/s    eta 4s                     dre  72%[=============>      ]  33.03M  4.29MB/s    eta 4s                    drea  74%[=============>      ]  33.96M  4.27MB/s    eta 4s                   dream  75%[==============>     ]  34.82M  4.25MB/s    eta 4s                  dreame  77%[==============>     ]  35.74M  4.28MB/s    eta 4s                 dreame.  79%[==============>     ]  36.66M  4.28MB/s    eta 3s                dreame.v  81%[===============>    ]  37.58M  4.29MB/s    eta 3s               dreame.va  83%[===============>    ]  38.50M  4.30MB/s    eta 3s              dreame.vac  85%[================>   ]  39.36M  4.30MB/s    eta 3s             dreame.vacu  87%[================>   ]  40.26M  4.31MB/s    eta 3s            dreame.vacuu  89%[================>   ]  41.15M  4.30MB/s    eta 1s           dreame.vacuum  91%[=================>  ]  42.08M  4.33MB/s    eta 1s          dreame.vacuum.  93%[=================>  ]  42.95M  4.33MB/s    eta 1s         dreame.vacuum.p  95%[==================> ]  43.85M  4.36MB/s    eta 1s        dreame.vacuum.p2  97%[==================> ]  44.76M  4.39MB/s    eta 1s       dreame.vacuum.p20  99%[==================> ]  45.57M  4.39MB/s    eta 0s     dreame.vacuum.p2029 100%[===================>]  45.85M  4.42MB/s    in 12s     
+
+2022-09-05 22:25:21 (3.75 MB/s) - 'dreame.vacuum.p2029_fw.tar.gz' saved [48076465/48076465]
+
+[root@p2029_release:~]# tar -xvzf dreame[root@p2029_release:~]# tar -xvzf dreame.vacuum.p2029_fw.tar.gz [J
+./boot.img
+./rootfs.img
+./mcu_md5sum
+mcu.bin
+./firmware.md5sum
+./install.sh
+./install-manual.sh
+./install-mcufw.sh
+./valetudo
+./_root_postboot.sh.tpl
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# 
+[root@p2029_release:~]# ./install.sh
+---------------------------------------------------------------------------
+ Dreame manual Firmware installer
+ Copyright 2020 by Dennis Giese [dgiese at dontvacuum.me]
+ Intended to work on mc1808,p2008,p2009,p2041
+ Version: dreame.vacuum.p2029
+ Use at your own risk
+---------------------------------------------------------------------------
+model=dreame.vacuum.p2029
+check image file size
+Checking integrity
+./boot.img: OK
+./rootfs.img: OK
+Start installation ... the robot will automatically reboot after the installation is complete (DO NOT REBOOT YOURSELF)
+Preparation complete, will install valetudo first
+Valetudo installation finished, continue FW update
+{"ret":"ok"}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+[root@p2029_release:~]# crond[1181]: USER root pid 2664 cmd /etc/rc.d/wifi_monitor.sh
+
+crond[1181]: USER root pid 2665 cmd /etc/rc.d/iot_sdk_monitor.sh
+
+crond[1181]: USER root pid 2666 cmd /usr/bin/get_ava_status.sh
+
+[340]HELLO! SBOOT is starting!
+[343]sboot commit : 9341f18 
+NOTICE:  BL3-1: v1.0(debug):b108d89
+NOTICE:  BL3-1: Built : 14:13:35, 2020-04-08
+NOTICE:  BL3-1 commit: 8
+NOTICE:  secure os exist
+MESSAGE: [0x0] TEE-CORE: OP-TEE version: 5f533bf9-dirty #1 2020年 08月 08日 星期六 03:04:16 UTC arm
+NOTICE:  BL3-1: Preparing for EL3 exit to normal world
+NOTICE:  BL3-1: Next image address = 0x4a000000
+NOTICE:  BL3-1: Next image spsr = 0x1d3�[SCP] :sunxi-arisc driver begin startup 2
+[SCP] :0x1
+[SCP] :arisc version: []
+[SCP] :arisc startup ready
+[SCP] :arisc startup notify message feedback
+[SCP] :send hard sync feedback message: 0x900200
+[SCP] :sunxi-arisc driver v1.10 is starting
+numid=13,iface=MIXER,name='Headphone Switch'
+  ; type=BOOLEAN,access=rw------,values=1
+  : values=on
+numid=9,iface=MIXER,name='Headphone Volume'
+  ; type=INTEGER,access=rw---R--,values=1,min=0,max=7,step=0
+  : values=3
+  | dBscale-min=-42.00dB,step=6.00dB,mute=0
+numid=10,iface=MIXER,name='LINEOUT Output Select'
+  ; type=ENUMERATED,access=rw------,values=1,items=2
+  ; Item #0 'DAC_SINGLE'
+  ; Item #1 'DAC_DIFFER'
+  : values=1
+numid=15,iface=MIXER,name='LINEOUT Switch'
+  ; type=BOOLEAN,access=rw------,values=1
+  : values=on
+numid=6,iface=MIXER,name='LINEOUT volume'
+  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
+  : values=31
+  | dBrange-
+    rangemin=0,,rangemax=1
+      | dBscale-min=0.00dB,step=0.00dB,mute=1
+    rangemin=2,,rangemax=31
+      | dBscale-min=-43.50dB,step=1.50dB,mute=1
+
+numid=11,iface=MIXER,name='ADCL Input MIC1 Boost Switch'
+  ; type=BOOLEAN,access=rw------,values=1
+  : values=on
+numid=4,iface=MIXER,name='MIC1 gain volume'
+  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
+  : values=0
+  | dBscale-min=0.00dB,step=1.00dB,mute=0
+numid=12,iface=MIXER,name='ADCR Input MIC2 Boost Switch'
+  ; type=BOOLEAN,access=rw------,values=1
+  : values=on
+numid=5,iface=MIXER,name='MIC2 gain volume'
+  ; type=INTEGER,access=rw---R--,values=1,min=0,max=31,step=0
+  : values=0
+  | dBscale-min=0.00dB,step=1.00dB,mute=0
+e2fsck 1.43.9 (8-Feb-2018)
+ext2fs_check_if_mount: Can't check if filesystem is mounted due to missing mtab file while determining whether /dev/by-name/misc is mounted.
+/dev/by-name/misc: recovering journal
+Setting free inodes count to 238 (was 239)
+Setting free blocks count to 928 (was 929)
+/dev/by-name/misc: clean, 18/256 files, 1120/2048 blocks
+killall: rsyslogd: no process killed
+Failed to connect to ubus
+crond[1180]: crond (busybox 1.31.0) started, log level 8
+
+chpasswd: password for 'root' changed
+--------------------------------------------------------------
+    _   _   _                        _     _                  
+   / \ | |_| |__   ___ _ __   __ _  | |   (_)_ __  _   ___  __
+  / _ \| __| '_ \ / _ \ '_ \ / _` | | |   | | '_ \| | | \ \/ /
+ / ___ \ |_| | | |  __/ | | | (_| | | |___| | | | | |_| |>  < 
+/_/   \_\__|_| |_|\___|_| |_|\__,_| |_____|_|_| |_|\__,_/_/\_\
+                                                              
+--------------------------------------------------------------
+ Athena Linux (p2029_release)
+--------------------------------------------------------------
+
+build with dustbuilder (https://builder.dontvacuum.me)
+Mon 05 Sep 2022 10:08:22 PM UTC
+1138
+[root@p2029_release:/]# crond[1916]: crond (busybox 1.31.0) started, log level 8
+
+crond[1916]: USER root pid 2055 cmd /etc/rc.d/wifi_monitor.sh
+
+crond[1916]: USER root pid 2056 cmd /etc/rc.d/iot_sdk_monitor.sh
+
+crond[1916]: USER root pid 2057 cmd /usr/bin/get_ava_status.sh
+
+crond[1916]: USER root pid 2219 cmd /etc/rc.d/wifi_monitor.sh
+
+crond[1916]: USER root pid 2220 cmd /etc/rc.d/iot_sdk_monitor.sh
+
+crond[1916]: USER root pid 2221 cmd /usr/bin/get_ava_status.sh
+
+
+[root@p2029_release:/]# 
+[root@p2029_release:/]# 
+[root@p2029_release:/]# 
+[root@p2029_release:/]# 
+[root@p2029_release:/]# uptime
+ 22:29:28 up 3 min,  0 users,  load average: 1.19, 0.65, 0.26
+[root@p2029_release:/]# ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8): 56 data bytes
+64 bytes from 8.8.8.8: seq=0 ttl=119 time=670.156 ms
+64 bytes from 8.8.8.8: seq=1 ttl=119 time=16.714 ms
+^C
+--- 8.8.8.8 ping statistics ---
+2 packets transmitted, 2 packets received, 0% packet loss
+round-trip min/avg/max = 16.714/343.435/670.156 ms
+[root@p2029_release:/]# crond[1916]: USER root pid 2426 cmd /etc/rc.d/wifi_monitor.sh
+
+crond[1916]: USER root pid 2427 cmd /etc/rc.d/iot_sdk_monitor.sh
+
+crond[1916]: USER root pid 2428 cmd /usr/bin/get_ava_status.sh
+
+crond[1916]: USER root pid 2429 cmd /usr/bin/check_silent_upgrade.sh
+
+crond[1916]: USER root pid 2430 cmd /usr/bin/report_data.sh net_quality
+
+
+[root@p2029_release:/]# 
+[root@p2029_release:/]# 
+[root@p2029_release:/]# 
+[root@p2029_release:/]# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq qlen 1000
+    link/ether 24:18:c6:16:bc:fb brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.152/24 brd 192.168.1.255 scope global wlan0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::2618:c6ff:fe16:bcfb/64 scope link 
+       valid_lft forever preferred_lft forever
+3: wlan1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop qlen 1000
+    link/ether 26:18:c6:16:bc:fb brd ff:ff:ff:ff:ff:ff
+[root@p2029_release:/]# 

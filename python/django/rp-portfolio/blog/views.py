@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from blog.models import Post, Comment
-
-from blog.forms import CommentForm
+from .forms import CommentForm
 
 
 def blog_index(request):
@@ -29,7 +28,6 @@ def blog_detail(request, pk):
     post = Post.objects.get(pk=pk)
 
     form = CommentForm()
-
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():
@@ -46,4 +44,5 @@ def blog_detail(request, pk):
         "comments": comments,
         "form": form,
     }
+
     return render(request, "blog_detail.html", context)
