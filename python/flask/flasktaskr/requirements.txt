@@ -17,5 +17,5 @@ pyasn1==0.1.9
 pycparser==2.17
 six==1.10.0
 SQLAlchemy==0.9.9
-Werkzeug==0.10.1
+Werkzeug==2.2.3
 WTForms==2.0.2
