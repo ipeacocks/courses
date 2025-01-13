@@ -1,0 +1,33 @@
+package main
+
+import (
+	"fmt"
+
+	pb "example.com/m/proto"
+)
+
+func addPerson(person *pb.Person, personList []*pb.Person) *pb.AddressBook {
+	personList = append(personList, person)
+	address_book := &pb.AddressBook{
+		People: personList,
+	}
+	return address_book
+}
+
+func main() {
+	// personList := []*pb.Person{{Name: "My name 1", Id: 1, Email: "1@example.com"}}
+	var personList = []*pb.Person{}
+	var person2 *pb.Person = &pb.Person{Name: "My name 2", Id: 2, Email: "2@example.com"}
+	var person3 *pb.Person = &pb.Person{Name: "My name 3", Id: 3, Email: "3@example.com"}
+	var person4 *pb.Person = &pb.Person{Name: "My name 4", Id: 4, Email: "4@example.com"}
+
+	personList = addPerson(person2, personList)
+	personList = addPerson(person3, personList)
+	personList = addPerson(person4, personList)
+
+	var address_book = &pb.AddressBook{
+		People: personList,
+	}
+
+	fmt.Println(address_book)
+}
