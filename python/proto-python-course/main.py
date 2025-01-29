@@ -1,6 +1,10 @@
+import google.protobuf.json_format as json_format
+
 import proto.simple_pb2 as simple_pb2
 import proto.complex_pb2 as complex_pb2
 import proto.enumerations_pb2 as enumerations_pb2
+import proto.oneofs_pb2 as oneofs_pb2
+import proto.maps_pb2 as maps_pb2
 
 def simple():
     return simple_pb2.Simple(
@@ -25,7 +29,57 @@ def enums():
         eye_color=1
     )
 
+def oneofs():
+    message = oneofs_pb2.Result(message="a message")
+    print(message)
+
+    message.id = 42
+    print(message)
+
+def maps():
+    message = maps_pb2.MapExample()
+    message.ids["myid"].id = 42
+    message.ids["myid2"].id = 43
+    message.ids["myid3"].id = 44
+    print(message)
+
+def file(message):
+    path = "simple.bin"
+
+    print("Write to file")
+    print(message)
+    with open(path, "wb") as f:
+        bytes_as_str = message.SerializeToString()
+        f.write(bytes_as_str)
+
+    print("Read from file")
+    with open(path, "rb") as f:
+        t = type(message)
+        message2 = t().FromString(f.read())
+    print(message2)
+
+
+def to_json(message):
+    return json_format.MessageToJson(
+        message,
+        indent=None
+        )
+
+def from_json(json_str, type):
+    return json_format.Parse(
+        json_str,
+        type(),
+        ignore_unknown_fields=True
+        )
+
 if __name__ == '__main__':
     # print(simple())
     # print(complex())
-    print(enums())
+    # print(enums())
+    # oneofs()
+    # maps()
+    # file(simple())
+    # json_str = to_json(complex())
+    # print(json_str)
+    # print(from_json(json_str, complex_pb2.Complex))
+    print(from_json('{"id":42, "unknown": "test"}', simple_pb2.Simple))
