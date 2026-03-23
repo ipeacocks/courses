@@ -20,6 +20,7 @@ type templateData struct {
 	Flash           string
 	IsAuthenticated bool
 	CSRFToken       string
+	User            models.User
 }
 
 // human date function to be used in the template file
@@ -27,7 +28,6 @@ type templateData struct {
 // this is an example of how template functions can be
 // created in addition to the std library ones
 func humanDate(t time.Time) string {
-	// Return the empty string if time has the zero value.
 	if t.IsZero() {
 		return ""
 	}
